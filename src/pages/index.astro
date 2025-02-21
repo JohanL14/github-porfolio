@@ -90,13 +90,13 @@ const projects = (await getCollection('work'))
 
 				<div class="gallery">
 					<Grid variant="small">
-						{
-							['Medium', 'BuzzFeed', 'The Next Web', 'awwwards.', 'TechCrunch'].map((brand) => (
-								<li class="mention-card">
-									<p>{brand}</p>
-								</li>
-							))
-						}
+						{[
+							{ name: "University of Minnesota", url: "https://news.d.umn.edu/articles/johan-lopez-ortega-lisc-internship-2023" }
+						].map((brand) => (
+							<li class="mention-card">
+								<a href={brand.url} target="_blank" rel="noopener noreferrer">{brand.name}</a>
+							</li>
+						))}
 					</Grid>
 				</div>
 			</section>
