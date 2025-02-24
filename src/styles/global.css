@@ -16,6 +16,17 @@
 	--gray-999_40: hsla(var(--gray-999-basis), 0.4);
 	--gray-999: #ffffff;
 
+	--accent-light: #c1dd99;  /* Light matcha green */
+	--accent-regular: #89a86c; /* Medium matcha green */
+	--accent-dark: #5c7042;    /* Dark matcha green */
+	--accent-overlay: hsla(90, 40%, 50%, 0.33);
+	--accent-subtle-overlay: var(--accent-overlay);
+	--accent-text-over: var(--gray-999);
+	--link-color: var(--accent-regular);
+
+
+	
+	/* 
 	--accent-light: #c561f6;
 	--accent-regular: #7611a6;
 	--accent-dark: #1c0056;
@@ -24,8 +35,11 @@
 	--accent-text-over: var(--gray-999);
 
 	--link-color: var(--accent-regular);
+	*/
 
-	/* Gradients */
+	/* Gradients 
+
+
 	--gradient-stop-1: var(--accent-light);
 	--gradient-stop-2: var(--accent-regular);
 	--gradient-stop-3: var(--accent-dark);
@@ -36,6 +50,20 @@
 		var(--gradient-stop-2),
 		var(--gradient-stop-3)
 	);
+	*/
+	/* Update in :root for the default (light) theme */
+	--gradient-stop-1: #e6f4d9; /* Pale matcha */
+	--gradient-stop-2: var(--accent-regular);
+	--gradient-stop-3: var(--accent-dark);
+	--gradient-accent: linear-gradient(
+	150deg,
+	var(--gradient-stop-1),
+	var(--gradient-stop-2),
+	var(--gradient-stop-3)
+	);
+
+
+	
 	--gradient-accent-orange: linear-gradient(
 		150deg,
 		#ca7879,
@@ -88,6 +116,17 @@
 	--gray-999-basis: 225, 31%, 5%;
 	--gray-999: #090b11;
 
+
+	--accent-light: #5c7042;   /* Dark matcha green */
+	--accent-regular: #89a86c; /* Medium matcha green */
+	--accent-dark: #c1dd99;    /* Light matcha green */
+	--accent-overlay: hsla(90, 40%, 50%, 0.33);
+	--accent-subtle-overlay: hsla(90, 30%, 40%, 0.33);
+	--accent-text-over: var(--gray-0);
+	--link-color: var(--accent-dark);
+
+
+	/*
 	--accent-light: #1c0056;
 	--accent-regular: #7611a6;
 	--accent-dark: #c561f6;
@@ -96,7 +135,10 @@
 	--accent-text-over: var(--gray-0);
 
 	--link-color: var(--accent-dark);
+	*/
 
+
+	/* Gradients
 	--gradient-stop-1: #4c11c6;
 	--gradient-subtle: linear-gradient(150deg, var(--gray-900) 19%, var(--gray-999) 81%);
 	--gradient-accent-orange: linear-gradient(
@@ -104,7 +146,22 @@
 		#ca7879,
 		var(--accent-regular),
 		var(--accent-light)
+	);*/
+
+
+	/* Updated for the dark theme */
+	/* Update in :root for the default (light) theme */
+	--gradient-stop-1: #e6f4d9; /* Pale matcha */
+	--gradient-stop-2: var(--accent-regular);
+	--gradient-stop-3: var(--accent-dark);
+	--gradient-accent: linear-gradient(
+	150deg,
+	var(--gradient-stop-1),
+	var(--gradient-stop-2),
+	var(--gradient-stop-3)
 	);
+
+
 	--gradient-stroke: linear-gradient(180deg, var(--gray-600), var(--gray-800));
 
 	--shadow-sm: 0px 6px 3px rgba(255, 255, 255, 0.01), 0px 4px 2px rgba(255, 255, 255, 0.01),
@@ -137,8 +194,9 @@ body {
 }
 
 img {
+	object-fit: cover;
 	max-width: 100%;
-	height: auto;
+	height: 100%;
 }
 
 a {
